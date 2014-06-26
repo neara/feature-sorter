@@ -19,6 +19,7 @@
 		3948D2B7195CB1490067B87E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3948D29F195CB1490067B87E /* UIKit.framework */; };
 		3948D2BF195CB1490067B87E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3948D2BD195CB1490067B87E /* InfoPlist.strings */; };
 		3948D2C1195CB1490067B87E /* FeatureSorterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3948D2C0195CB1490067B87E /* FeatureSorterTests.m */; };
+		3948D2CD195CB29A0067B87E /* SSDMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3948D2CC195CB29A0067B87E /* SSDMain.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +49,7 @@
 		3948D2BC195CB1490067B87E /* FeatureSorterTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "FeatureSorterTests-Info.plist"; sourceTree = "<group>"; };
 		3948D2BE195CB1490067B87E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		3948D2C0195CB1490067B87E /* FeatureSorterTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FeatureSorterTests.m; sourceTree = "<group>"; };
+		3948D2CC195CB29A0067B87E /* SSDMain.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SSDMain.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +113,7 @@
 				3948D2AB195CB1490067B87E /* SSDAppDelegate.m */,
 				3948D2AD195CB1490067B87E /* Images.xcassets */,
 				3948D2A2195CB1490067B87E /* Supporting Files */,
+				3948D2CC195CB29A0067B87E /* SSDMain.storyboard */,
 			);
 			path = FeatureSorter;
 			sourceTree = "<group>";
@@ -221,6 +224,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3948D2A6195CB1490067B87E /* InfoPlist.strings in Resources */,
+				3948D2CD195CB29A0067B87E /* SSDMain.storyboard in Resources */,
 				3948D2AE195CB1490067B87E /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -361,6 +365,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "FeatureSorter/FeatureSorter-Prefix.pch";
 				INFOPLIST_FILE = "FeatureSorter/FeatureSorter-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -374,6 +379,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "FeatureSorter/FeatureSorter-Prefix.pch";
 				INFOPLIST_FILE = "FeatureSorter/FeatureSorter-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
