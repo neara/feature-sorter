@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "SSDSingleFeature.h"
 
 @interface SSDFeaturesTableViewController : UITableViewController
 

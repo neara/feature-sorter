@@ -10,6 +10,8 @@
 
 @interface SSDFeaturesTableViewController ()
 
+@property NSMutableArray *featureItems;
+
 @end
 
 @implementation SSDFeaturesTableViewController
@@ -26,6 +28,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.featureItems = [[NSMutableArray alloc] init];
     
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -38,6 +41,16 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+// Private: loads initial dataset from storage
+//
+// FIXME! i created a few starting items to help me code. remove those, when ready
+- (void) loadInitialData
+{
+    SSDSingleFeature *item1 = [[SSDSingleFeature alloc] init];
+    item1.mFeatureName = @"Dynamic table view with cells";
+    
 }
 
 #pragma mark - Table view data source
