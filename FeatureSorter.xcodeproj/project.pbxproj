@@ -57,6 +57,7 @@
 		396A6DA11976C18300C5BF54 /* SSDAddFeatureViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SSDAddFeatureViewController.m; path = "feature-sorter/SSDAddFeatureViewController.m"; sourceTree = "<group>"; };
 		396A6DA31976C24B00C5BF54 /* SSDFeaturesTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SSDFeaturesTableViewController.h; path = "feature-sorter/SSDFeaturesTableViewController.h"; sourceTree = "<group>"; };
 		396A6DA41976C24B00C5BF54 /* SSDFeaturesTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SSDFeaturesTableViewController.m; path = "feature-sorter/SSDFeaturesTableViewController.m"; sourceTree = "<group>"; };
+		39D3700A19782114008B89CF /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		8D77340719657BF600348D0E /* SSDSingleFeature.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSDSingleFeature.h; sourceTree = "<group>"; };
 		8D77340819657BF600348D0E /* SSDSingleFeature.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSDSingleFeature.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -107,6 +108,7 @@
 		3948D29A195CB1490067B87E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				39D3700A19782114008B89CF /* CoreData.framework */,
 				3948D29B195CB1490067B87E /* Foundation.framework */,
 				3948D29D195CB1490067B87E /* CoreGraphics.framework */,
 				3948D29F195CB1490067B87E /* UIKit.framework */,
