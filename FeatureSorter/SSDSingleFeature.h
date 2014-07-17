@@ -23,12 +23,12 @@ typedef enum {
 
 @interface SSDSingleFeature : NSObject
 
-@property (nonatomic, strong) NSNumber* mFeatureValue;
-@property (nonatomic, strong) NSNumber* mFeatureEffort;
-@property (nonatomic, strong) NSString* mFeatureName;
-@property (nonatomic, strong) NSString* mFeatureDescription;
-@property (nonatomic, strong) NSString* mFeatureComments;
-@property (nonatomic) FeatureStatusEnum mFeatureStatus;
-@property (nonatomic) FeatureClassificationEnum mFeatureClassification;
+@property (nonatomic) NSNumber*                     value;
+@property (nonatomic) NSNumber*                     effort;
+@property (nonatomic) NSString*                     name;
+@property (nonatomic) NSString*                     description;
+@property (nonatomic) NSString*                     comments;
+@property (nonatomic) FeatureStatusEnum             status;
+@property (nonatomic) FeatureClassificationEnum     classification;
 
 @end
