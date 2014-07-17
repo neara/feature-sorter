@@ -29,7 +29,7 @@
 {
     [super viewDidLoad];
     self.featureItems = [[NSMutableArray alloc] init];
-    
+    [self loadInitialData];
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     
@@ -50,32 +50,37 @@
 {
     SSDSingleFeature *item1 = [[SSDSingleFeature alloc] init];
     item1.mFeatureName = @"Dynamic table view with cells";
-    
+    item1.mFeatureEffort = [NSNumber numberWithInt:4];  // out of 10
+    item1.mFeatureValue = [NSNumber numberWithInt:5];  // out of 10
+    item1.mFeatureStatus = statusNotStarted;
+    [self.featureItems addObject:item1];
 }
 
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-#warning Potentially incomplete method implementation.
     // Return the number of sections.
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-#warning Incomplete method implementation.
     // Return the number of rows in the section.
-    return 0;
+    return [self.featureItems count];
 }
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"UITableViewCell" forIndexPath:indexPath];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"FeatureCell" forIndexPath:indexPath];
     
-    // Configure the cell...
-    
+    SSDSingleFeature *featureItem = [self.featureItems objectAtIndex:indexPath.row];
+    cell.textLabel.text = featureItem.mFeatureName;
+    cell.detailTextLabel.text =
+        [NSString stringWithFormat:@"Value: %@ | Effort: %@",
+         featureItem.mFeatureValue, featureItem.mFeatureEffort];
+
     return cell;
 }
 
