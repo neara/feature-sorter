@@ -10,4 +10,7 @@
 
 @interface SSDAddFeatureViewController : UIViewController
 
+@property (weak, nonatomic) IBOutlet UITextField *textFeatureName;
+@property (weak, nonatomic) IBOutlet UITextView *textFeatureDescription;
+
 @end
