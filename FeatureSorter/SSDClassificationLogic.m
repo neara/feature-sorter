@@ -10,7 +10,7 @@
 
 @implementation SSDClassificationLogic
 
-- (FeatureClassificationEnum) Classify: (int)value usingEffort: (int)effort
+- (FeatureClassificationEnum) Classify: (int32_t)value usingEffort: (int32_t)effort
 {
     if (value < self.FeatureValueLimit) {
         if (effort < self.FeatureEffortLimit)
@@ -25,5 +25,29 @@
             return clsOyster;
     }
 }
+
+- (id)init
+{
+    if (self = [super init])
+    {
+        self.FeatureEffortLimit = 5;
+        self.FeatureValueLimit = 5;
+    }
+    
+    return self;
+}
+
++ (id)sharedClassificationLogic
+{
+    static SSDClassificationLogic *sharedLogic = nil;
+    @synchronized (self) {
+        if (sharedLogic == nil) {
+            sharedLogic = [[self alloc] init];
+        }
+    }
+    
+    return sharedLogic;
+}
+
 
 @end

@@ -11,9 +11,12 @@
 
 @interface SSDClassificationLogic : NSObject
 
-@property (nonatomic) int FeatureValueLimit;
-@property (nonatomic) int FeatureEffortLimit;
+@property (nonatomic) int32_t FeatureValueLimit;
+@property (nonatomic) int32_t FeatureEffortLimit;
 
-- (FeatureClassificationEnum) Classify: (int)value usingEffort: (int)effort;
+- (FeatureClassificationEnum) Classify: (int32_t)value usingEffort: (int32_t)effort;
+
+- (id)init;
++ (id)sharedClassificationLogic;
 
 @end

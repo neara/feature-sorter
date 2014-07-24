@@ -50,8 +50,8 @@
 {
     SSDSingleFeature *item1 = [[SSDSingleFeature alloc] init];
     item1.name = @"Dynamic table view with cells";
-    item1.effort = [NSNumber numberWithInt:4];  // out of 10
-    item1.value = [NSNumber numberWithInt:5];  // out of 10
+    item1.effort = 4;  // out of 10
+    item1.value = 5;  // out of 10
     item1.status = statusNotStarted;
     [self.featureItems addObject:item1];
 }
@@ -78,7 +78,7 @@
     SSDSingleFeature *featureItem = [self.featureItems objectAtIndex:indexPath.row];
     cell.textLabel.text = featureItem.name;
     cell.detailTextLabel.text =
-        [NSString stringWithFormat:@"Value: %@ | Effort: %@",
+        [NSString stringWithFormat:@"Value: %d | Effort: %d",
          featureItem.value, featureItem.effort];
 
     return cell;
