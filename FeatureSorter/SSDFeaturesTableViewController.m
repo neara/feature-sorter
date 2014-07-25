@@ -7,10 +7,14 @@
 //
 
 #import "SSDFeaturesTableViewController.h"
+#import "SSDClassificationPresentation.h"
+#import "SSDClassificationPresentationItem.h"
 
 @interface SSDFeaturesTableViewController ()
 
-@property NSMutableArray *featureItems;
+// private properties
+@property NSMutableArray*                   featureItems;
+@property SSDClassificationPresentation*    classificationPresentationChoices;
 
 @end
 
@@ -28,8 +32,17 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+
+    // acquire feature items container
     self.featureItems = [[NSMutableArray alloc] init];
+    
+    // acquire classification presentation details
+    self.classificationPresentationChoices = [SSDClassificationPresentation sharedClassificationPresentation];
+
+    // fill in feature items container
     [self loadInitialData];
+
+    
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     
@@ -43,9 +56,9 @@
     // Dispose of any resources that can be recreated.
 }
 
-// Private: loads initial dataset from storage
-//
-// FIXME! i created a few starting items to help me code. remove those, when ready
+# pragma mark - Private methods
+
+// loads features from the store
 - (void) loadInitialData
 {
     SSDSingleFeature *item1 = [[SSDSingleFeature alloc] init];
@@ -76,11 +89,18 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"FeatureCell" forIndexPath:indexPath];
     
     SSDSingleFeature *featureItem = [self.featureItems objectAtIndex:indexPath.row];
+    
+    // acquire presentation details
+    SSDClassificationPresentationItem* featureClassificationDetails =
+        [self.classificationPresentationChoices getFor:featureItem.classification];
+
     cell.textLabel.text = featureItem.name;
     cell.detailTextLabel.text =
         [NSString stringWithFormat:@"Value: %d | Effort: %d",
          featureItem.value, featureItem.effort];
 
+    cell.backgroundColor = featureClassificationDetails.backgroundColor;
+    
     return cell;
 }
 
