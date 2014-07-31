@@ -23,6 +23,9 @@
 		39D3701119785FB7008B89CF /* SSDAddFeatureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 39D3701019785FB7008B89CF /* SSDAddFeatureViewController.m */; };
 		39D3701719786121008B89CF /* SSDFeaturesTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 39D3701619786121008B89CF /* SSDFeaturesTableViewController.m */; };
 		39D3701A197861B0008B89CF /* SSDClassificationLogic.m in Sources */ = {isa = PBXBuildFile; fileRef = 39D37019197861B0008B89CF /* SSDClassificationLogic.m */; };
+		39F5BFB9198257DE0075E22E /* SSDClassificationPresentationItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 39F5BFB8198257DE0075E22E /* SSDClassificationPresentationItem.m */; };
+		39F5BFBC19825AA70075E22E /* SSDClassificationPresentation.m in Sources */ = {isa = PBXBuildFile; fileRef = 39F5BFBB19825AA70075E22E /* SSDClassificationPresentation.m */; };
+		39F5BFBF198293A80075E22E /* SSDFeaturesContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = 39F5BFBE198293A80075E22E /* SSDFeaturesContainer.m */; };
 		8D77340919657BF600348D0E /* SSDSingleFeature.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D77340819657BF600348D0E /* SSDSingleFeature.m */; };
 /* End PBXBuildFile section */
 
@@ -61,6 +64,12 @@
 		39D3701619786121008B89CF /* SSDFeaturesTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSDFeaturesTableViewController.m; sourceTree = "<group>"; };
 		39D37018197861B0008B89CF /* SSDClassificationLogic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSDClassificationLogic.h; sourceTree = "<group>"; };
 		39D37019197861B0008B89CF /* SSDClassificationLogic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSDClassificationLogic.m; sourceTree = "<group>"; };
+		39F5BFB7198257DE0075E22E /* SSDClassificationPresentationItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSDClassificationPresentationItem.h; sourceTree = "<group>"; };
+		39F5BFB8198257DE0075E22E /* SSDClassificationPresentationItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSDClassificationPresentationItem.m; sourceTree = "<group>"; };
+		39F5BFBA19825AA70075E22E /* SSDClassificationPresentation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSDClassificationPresentation.h; sourceTree = "<group>"; };
+		39F5BFBB19825AA70075E22E /* SSDClassificationPresentation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSDClassificationPresentation.m; sourceTree = "<group>"; };
+		39F5BFBD198293A80075E22E /* SSDFeaturesContainer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSDFeaturesContainer.h; sourceTree = "<group>"; };
+		39F5BFBE198293A80075E22E /* SSDFeaturesContainer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSDFeaturesContainer.m; sourceTree = "<group>"; };
 		8D77340719657BF600348D0E /* SSDSingleFeature.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSDSingleFeature.h; sourceTree = "<group>"; };
 		8D77340819657BF600348D0E /* SSDSingleFeature.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSDSingleFeature.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -126,6 +135,12 @@
 				3948D2AA195CB1490067B87E /* SSDAppDelegate.h */,
 				39D3701519786121008B89CF /* SSDFeaturesTableViewController.h */,
 				39D3701619786121008B89CF /* SSDFeaturesTableViewController.m */,
+				39F5BFBD198293A80075E22E /* SSDFeaturesContainer.h */,
+				39F5BFBE198293A80075E22E /* SSDFeaturesContainer.m */,
+				39F5BFB7198257DE0075E22E /* SSDClassificationPresentationItem.h */,
+				39F5BFBA19825AA70075E22E /* SSDClassificationPresentation.h */,
+				39F5BFBB19825AA70075E22E /* SSDClassificationPresentation.m */,
+				39F5BFB8198257DE0075E22E /* SSDClassificationPresentationItem.m */,
 				39D37018197861B0008B89CF /* SSDClassificationLogic.h */,
 				39D37019197861B0008B89CF /* SSDClassificationLogic.m */,
 				3948D2AB195CB1490067B87E /* SSDAppDelegate.m */,
@@ -266,9 +281,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				39F5BFBF198293A80075E22E /* SSDFeaturesContainer.m in Sources */,
 				3948D2A8195CB1490067B87E /* main.m in Sources */,
 				39D3701719786121008B89CF /* SSDFeaturesTableViewController.m in Sources */,
 				3948D2AC195CB1490067B87E /* SSDAppDelegate.m in Sources */,
+				39F5BFB9198257DE0075E22E /* SSDClassificationPresentationItem.m in Sources */,
+				39F5BFBC19825AA70075E22E /* SSDClassificationPresentation.m in Sources */,
 				39D3701119785FB7008B89CF /* SSDAddFeatureViewController.m in Sources */,
 				8D77340919657BF600348D0E /* SSDSingleFeature.m in Sources */,
 				39D3701A197861B0008B89CF /* SSDClassificationLogic.m in Sources */,
