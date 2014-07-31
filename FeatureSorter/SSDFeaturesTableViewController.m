@@ -9,6 +9,7 @@
 #import "SSDFeaturesTableViewController.h"
 #import "SSDClassificationPresentation.h"
 #import "SSDClassificationPresentationItem.h"
+#import "SSDClassificationLogic.h"
 
 @interface SSDFeaturesTableViewController ()
 
@@ -61,11 +62,15 @@
 // loads features from the store
 - (void) loadInitialData
 {
+    SSDClassificationLogic* logic = [SSDClassificationLogic sharedClassificationLogic];
+    
     SSDSingleFeature *item1 = [[SSDSingleFeature alloc] init];
+    
     item1.name = @"Dynamic table view with cells";
-    item1.effort = 4;  // out of 10
-    item1.value = 5;  // out of 10
+    item1.effort = 10;  // out of 10
+    item1.value = 1;  // out of 10
     item1.status = statusNotStarted;
+    item1.classification = [logic Classify:item1.value usingEffort:item1.effort];
     [self.featureItems addObject:item1];
 }
 

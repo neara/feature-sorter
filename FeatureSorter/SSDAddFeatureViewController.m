@@ -30,22 +30,29 @@
     // Do any additional setup after loading the view.
     
     // Initialize the new feature and the classification logic
-    self.feature = [SSDSingleFeature alloc];
+    self.feature = [[SSDSingleFeature alloc] init];
     self.logic = [SSDClassificationLogic sharedClassificationLogic];
 
+    self.sliderFeatureValue.value = self.feature.value;
+    self.sliderFeatureEffort.value = self.feature.effort;
+    
     [self updateValue:(int32_t)self.sliderFeatureEffort.value];
     [self updateEffort:(int32_t)self.sliderFeatureValue.value];
     
     // Update the background color of the description field
     [self.textFeatureDescription.layer setBackgroundColor:[[UIColor whiteColor] CGColor]];
     
-    //To make the border look very close to a UITextField
+    // To make the border look very close to a UITextField
     [self.textFeatureDescription.layer setBorderColor:[[[UIColor grayColor] colorWithAlphaComponent:0.5] CGColor]];
     [self.textFeatureDescription.layer setBorderWidth:0.5];
     
-    //The rounded corner part, where you specify your view's corner radius:
+    // The rounded corner part, where you specify your view's corner radius:
     self.textFeatureDescription.layer.cornerRadius = 5;
     self.textFeatureDescription.clipsToBounds = YES;
+    
+    // Adding a toolbar to the top of the keyboard
+    self.textFeatureDescription.inputAccessoryView = self.toolbarKeyboard;
+    self.textFeatureName.inputAccessoryView = self.toolbarKeyboard;
 }
 
 - (void)didReceiveMemoryWarning
@@ -75,6 +82,12 @@
     self.feature.status = sender.selectedSegmentIndex;
 }
 
+- (IBAction)doneWithKeyboardPressed:(UIBarButtonItem *)sender
+{
+    [self.textFeatureDescription resignFirstResponder];
+    [self.textFeatureName resignFirstResponder];
+}
+
 - (void) updateValue: (int32_t)newValue
 {
     self.feature.value = newValue;
@@ -94,6 +107,7 @@
 
     self.segmentedFeatureClassification.selectedSegmentIndex = self.feature.classification;
 }
+
 
 
 /*

@@ -10,4 +10,14 @@
 
 @implementation SSDSingleFeature
 
+- (id)init
+{
+    if (self =[super init]) {
+        self.value = 5;
+        self.effort = 5;
+    }
+    
+    return self;
+}
+
 @end

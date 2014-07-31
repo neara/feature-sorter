@@ -22,6 +22,7 @@
 @property (weak, nonatomic) IBOutlet UISlider *sliderFeatureEffort;
 
 @property (weak, nonatomic) IBOutlet UISegmentedControl *segmentedFeatureClassification;
+@property (weak, nonatomic) IBOutlet UIToolbar *toolbarKeyboard;
 
 @property (strong, nonatomic) SSDSingleFeature *feature;
 @property (strong, nonatomic) SSDClassificationLogic *logic;
@@ -29,6 +30,7 @@
 - (IBAction)valueChanged:(UISlider*)sender;
 - (IBAction)effortChanged:(UISlider*)sender;
 - (IBAction)statusChanged:(UISegmentedControl *)sender;
+- (IBAction)doneWithKeyboardPressed:(UIBarButtonItem *)sender;
 
 - (void) updateValue: (int32_t)newValue;
 - (void) updateEffort: (int32_t)newEffort;
