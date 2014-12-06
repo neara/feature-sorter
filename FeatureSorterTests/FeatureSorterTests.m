@@ -8,6 +8,11 @@
 
 #import <XCTest/XCTest.h>
 
+#import "SSDFeature.h"
+#import "SSDFeaturesContainer.h"
+#import "SSDClassificationLogic.h"
+
+
 @interface FeatureSorterTests : XCTestCase
 
 @end
@@ -26,9 +31,25 @@
     [super tearDown];
 }
 
-- (void)testExample
+- (void)testFeature
 {
-    XCTFail(@"No implementation for \"%s\"", __PRETTY_FUNCTION__);
+    SSDFeature *item = [[SSDFeature alloc] init];
+    item.value = 12;
+    item.effort = 5;
+    item.name = @"test feature";
+    
+    XCTAssertEqual(item.status, statusNotStarted);
+    XCTAssertEqual(item.classification, clsUndefined);
+    
+    SSDClassificationLogic *logic = [SSDClassificationLogic sharedClassificationLogic];
+    item.classification = [logic Classify:item.value usingEffort:item.effort];
+    
+    XCTAssertNotEqual(item.classification, clsUndefined);
+}
+
+- (void)testFeaturesContainer
+{
+    SSDFeaturesContainer *container = [[SSDFeaturesContainer alloc] init];
 }
 
 @end
