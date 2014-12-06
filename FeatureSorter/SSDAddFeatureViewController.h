@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#include "SSDSingleFeature.h"
+#include "SSDFeature.h"
 #include "SSDClassificationLogic.h"
 
 @interface SSDAddFeatureViewController : UIViewController
@@ -24,7 +24,7 @@
 @property (weak, nonatomic) IBOutlet UISegmentedControl *segmentedFeatureClassification;
 @property (weak, nonatomic) IBOutlet UIToolbar *toolbarKeyboard;
 
-@property (strong, nonatomic) SSDSingleFeature *feature;
+@property (strong, nonatomic) SSDFeature *feature;
 @property (strong, nonatomic) SSDClassificationLogic *logic;
 
 - (IBAction)valueChanged:(UISlider*)sender;

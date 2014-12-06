@@ -15,15 +15,16 @@ typedef enum {
 }   FeatureStatusEnum;
 
 typedef enum {
+    clsUndefined,
     clsEasyWin,
     clsPearl,
     clsOyster,
     clsWhiteElephant
 }   FeatureClassificationEnum;
 
-@interface SSDSingleFeature : NSObject
+@interface SSDFeature : NSObject
 
-@property (nonatomic) int                           ID;
+@property (nonatomic) int32_t                       ID;
 @property (nonatomic) int32_t                       value;
 @property (nonatomic) int32_t                       effort;
 @property (nonatomic) NSString*                     name;

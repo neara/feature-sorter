@@ -6,15 +6,19 @@
 //  Copyright (c) 2014 SSD. All rights reserved.
 //
 
-#import "SSDSingleFeature.h"
+#import "SSDFeature.h"
 
-@implementation SSDSingleFeature
+@implementation SSDFeature
+
+@synthesize description;
 
 - (id)init
 {
-    if (self =[super init]) {
+    if (self == [super init]) {
         self.value = 5;
         self.effort = 5;
+        self.status = statusNotStarted;
+        self.classification = clsUndefined;
     }
     
     return self;

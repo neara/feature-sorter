@@ -64,7 +64,7 @@
 {
     SSDClassificationLogic* logic = [SSDClassificationLogic sharedClassificationLogic];
     
-    SSDSingleFeature *item1 = [[SSDSingleFeature alloc] init];
+    SSDFeature *item1 = [[SSDFeature alloc] init];
     
     item1.name = @"Dynamic table view with cells";
     item1.effort = 10;  // out of 10
@@ -93,7 +93,7 @@
 {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"FeatureCell" forIndexPath:indexPath];
     
-    SSDSingleFeature *featureItem = [self.featureItems objectAtIndex:indexPath.row];
+    SSDFeature *featureItem = [self.featureItems objectAtIndex:indexPath.row];
     
     // acquire presentation details
     SSDClassificationPresentationItem* featureClassificationDetails =
@@ -164,5 +164,10 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+
+}
 
 @end

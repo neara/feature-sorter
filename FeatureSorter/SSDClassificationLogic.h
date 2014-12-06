@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "SSDSingleFeature.h"
+#import "SSDFeature.h"
 
 @interface SSDClassificationLogic : NSObject
 

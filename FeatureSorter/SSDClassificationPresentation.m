@@ -8,7 +8,7 @@
 
 #import "SSDClassificationPresentation.h"
 #import "SSDClassificationPresentationItem.h"
-#import "SSDSingleFeature.h"
+#import "SSDFeature.h"
 
 
 @interface SSDClassificationPresentation()

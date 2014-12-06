@@ -30,7 +30,7 @@
     // Do any additional setup after loading the view.
     
     // Initialize the new feature and the classification logic
-    self.feature = [[SSDSingleFeature alloc] init];
+    self.feature = [[SSDFeature alloc] init];
     self.logic = [SSDClassificationLogic sharedClassificationLogic];
 
     self.sliderFeatureValue.value = self.feature.value;

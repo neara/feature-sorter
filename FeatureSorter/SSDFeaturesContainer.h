@@ -7,11 +7,20 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "SSDSingleFeature.h"
+#import "SSDFeature.h"
 
 @interface SSDFeaturesContainer : NSObject
 
-- (BOOL) add:(SSDSingleFeature* )item;
-- (BOOL) remove:(int)itemID;
+@property (nonatomic, retain) NSString *primarySort;
+
+- (SSDFeature*)         get:(int32_t)itemID;
+- (BOOL)                add:(SSDFeature* )item;
+- (BOOL)                remove:(int32_t)itemID;
+- (BOOL)                update:(SSDFeature* )item;
+- (void)                refreshSubset;
+- (BOOL)                load;
+- (BOOL)                save;
+- (BOOL)                clearAll;
+- (NSMutableArray*)     getCurrentSubset;
 
 @end
